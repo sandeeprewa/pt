@@ -1,0 +1,5 @@
+		String query="{ \"query\":{\"bool\":{ \"must\": [ { \"match\":{\"venue.name\":"
+				+ "\""+masterEventEntity.getMasterVenueEntity().getName()+"\" } },{ \"match\": {\"productionDateUtc\":"
+				+ "\""+masterEventEntity.getStartDateTimeLocal()+"\"} }],\"should\": [{ \"match\":{\"productionName\":"
+				+ "\""+masterEventEntity.getName()+"\"}}],"
+				+ "\"minimum_should_match\": 1}}}";
